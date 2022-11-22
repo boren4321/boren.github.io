@@ -1,203 +1,752 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
 
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title>test | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sd  sdklsj dsajkldas klxjc zxc zxckljzxlcj x">
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="任博">
+  <meta name="keywords" content="随笔">
+  
+    <meta name="description" content="next.js分享官网地址https:&#x2F;&#x2F;www.nextjs.cn 客户端渲染（CSR）服务器端把模板和数据发送给客户端，渲染过程在客户端完成。 缺点：  白屏，在 AJAX 得到渲染之前，页面中并没有内容，只能通过 Loading 来过度  SEO 不友好，因为搜索引擎访问页面， 默认不会执行 JS，只能看到 HTML，而不会等待 AJAX 异步请求数据，所以搜索不到页面内容   服务端渲染(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test">
 <meta property="og:url" content="http://example.com/2022/11/22/test/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="sd  sdklsj dsajkldas klxjc zxc zxckljzxlcj x">
-<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="随笔笔记">
+<meta property="og:description" content="next.js分享官网地址https:&#x2F;&#x2F;www.nextjs.cn 客户端渲染（CSR）服务器端把模板和数据发送给客户端，渲染过程在客户端完成。 缺点：  白屏，在 AJAX 得到渲染之前，页面中并没有内容，只能通过 Loading 来过度  SEO 不友好，因为搜索引擎访问页面， 默认不会执行 JS，只能看到 HTML，而不会等待 AJAX 异步请求数据，所以搜索不到页面内容   服务端渲染(">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-22T06:03:30.000Z">
-<meta property="article:modified_time" content="2022-11-22T07:15:19.065Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
+<meta property="article:modified_time" content="2022-11-22T07:22:30.142Z">
+<meta property="article:author" content="任博">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  
-<link rel="stylesheet" href="/css/style.css">
+  <title>test - 随笔笔记</title>
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
 <meta name="generator" content="Hexo 5.4.2"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/22/test/" class="article-date">
-  <time datetime="2022-11-22T06:03:30.000Z" itemprop="datePublished">2022-11-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      test
-    </h1>
   
 
-      </header>
+  <header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>sd </li>
-<li>sdklsj</li>
-<li>dsajkldas klxjc zxc</li>
-<li>zxckljzxlcj x</li>
-</ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/11/22/test/" data-id="clarvtz1b00014osw3of10rna" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2022/11/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  
-</nav>
 
-  
-</article>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-</section>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
         
-          <li>
-            <a href="/2022/11/22/test/">test</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/2022/11/22/hello-world/">Hello World</a>
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="test"></span>
+          
+        </div>
+
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-11-22 14:03" pubdate>
+          2022年11月22日 下午
+        </time>
+      </span>
+    
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          9.7k 字
+        
+      </span>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          81 分钟
+        
+      </span>
+    
 
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+    
+    
   </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">test</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="next-js分享"><a href="#next-js分享" class="headerlink" title="next.js分享"></a>next.js分享</h1><h2 id="官网地址"><a href="#官网地址" class="headerlink" title="官网地址"></a>官网地址</h2><p><a target="_blank" rel="noopener" href="https://www.nextjs.cn/">https://www.nextjs.cn</a></p>
+<h2 id="客户端渲染（CSR）"><a href="#客户端渲染（CSR）" class="headerlink" title="客户端渲染（CSR）"></a>客户端渲染（CSR）</h2><p>服务器端把模板和数据发送给客户端，渲染过程在客户端完成。</p>
+<p>缺点：</p>
+<ul>
+<li><p>白屏，在 AJAX 得到渲染之前，页面中并没有内容，只能通过 Loading 来过度</p>
+</li>
+<li><p>SEO 不友好，因为搜索引擎访问页面， 默认不会执行 JS，只能看到 HTML，而不会等待 AJAX 异步请求数据，所以搜索不到页面内容</p>
+</li>
+</ul>
+<h2 id="服务端渲染-SSR"><a href="#服务端渲染-SSR" class="headerlink" title="服务端渲染(SSR)"></a>服务端渲染(SSR)</h2><p>客户端渲染：渲染过程在服务器端完成，最终的渲染结果 HTML 页面通过 HTTP 协议发送给客户端。对于客户端而言，只是看到了最终的 HTML 页面，看不到数据，也看不到模板</p>
+<h2 id="为什么使用next-js"><a href="#为什么使用next-js" class="headerlink" title="为什么使用next.js"></a>为什么使用next.js</h2><ul>
+<li>直观的、 基于页面 的路由系统（并支持 动态路由）</li>
+<li>预渲染。支持在页面级的 静态生成 (SSG) 和 服务器端渲染 (SSR)</li>
+<li>自动代码拆分，提升页面加载速度</li>
+<li>具有经过优化的预取功能的 客户端路由</li>
+<li>内置 CSS 和 Sass 的支持，并支持任何 CSS-in-JS 库</li>
+<li>开发环境支持 快速刷新</li>
+<li>利用 Serverless Functions 及 API 路由 构建 API 功能</li>
+<li>完全可扩展</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><code>npx create-next-app@latest --typescript</code> 创建一个使用TypeScript的项目</p>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>在 Next.js 中，一个 <strong>page（页面）</strong> 就是一个从 <code>.js</code>、<code>jsx</code>、<code>.ts</code> 或 <code>.tsx</code> 文件导出（export）的 <a target="_blank" rel="noopener" href="https://reactjs.org/docs/components-and-props.html">React 组件</a> ，这些文件存放在 <code>pages</code> 目录下。每个 page（页面）都使用其文件名作为路由（route）。</p>
+<ul>
+<li><code>./pages/index.tsx</code> –&gt; 首页 <code>/</code></li>
+<li><code>./pages/admin/index.tsx</code> –&gt; <code>/admin</code></li>
+<li><code>./pages/admin/post.tsx </code>–&gt; <code>/admin/post</code></li>
+</ul>
+<h3 id="具有动态路由的页面"><a href="#具有动态路由的页面" class="headerlink" title="具有动态路由的页面"></a>具有动态路由的页面</h3><p>Next.js 支持具有动态路由的 pages（页面）。例如，如果你创建了一个命名为 <code>pages/posts/[id].js</code> 的文件，那么就可以通过 <code>posts/1</code>、<code>posts/2</code> 等类似的路径进行访问。</p>
+<p>动态路由的参数将从<code>query</code>中取到：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">import</span> &#123; useRouter &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/router&#x27;</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">Post</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> router = <span class="hljs-title function_">useRouter</span>()<br>  <span class="hljs-keyword">const</span> &#123; pid &#125; = router.<span class="hljs-property">query</span><br><br>  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Post: &#123;pid&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Post</span><br></code></pre></td></tr></table></figure>
+
+<p>使用<code>router.push(&#39;/blogs&#39;,undefined,&#123;shallow:true&#125;)</code> 路径发生变化，获取到新的路由对象，但是不会再次运行数据获取方法，其中包括<code>getServerSideProps</code>、<code>getStaticProps 和 getInitialProps</code></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">import</span> &#123; useEffect &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span><br><span class="hljs-keyword">import</span> &#123; useRouter &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/router&#x27;</span><br><br><span class="hljs-comment">// Current URL is &#x27;/&#x27;</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Page</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">const</span> router = <span class="hljs-title function_">useRouter</span>()<br><br>  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>    <span class="hljs-comment">// Always do navigations after the first render</span><br>    router.<span class="hljs-title function_">push</span>(<span class="hljs-string">&#x27;/?counter=10&#x27;</span>, <span class="hljs-literal">undefined</span>, &#123; <span class="hljs-attr">shallow</span>: <span class="hljs-literal">true</span> &#125;)<br>  &#125;, [])<br><br>  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>    <span class="hljs-comment">// The counter changed!</span><br>  &#125;, [router.<span class="hljs-property">query</span>.<span class="hljs-property">counter</span>])<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Page</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Catch-all-routes"><a href="#Catch-all-routes" class="headerlink" title="Catch all routes"></a>Catch all routes</h3><ul>
+<li><p>可以通过 <code>[...slug].jsx</code>的方式捕获所有路由</p>
+</li>
+<li><p>例如：</p>
+<ul>
+<li><code>pages/post/[...slug].js</code> 可以匹配<code>/post/a</code>, <code>/post/a/b</code>, <code>/post/a/b/c</code> 等等.</li>
+</ul>
+</li>
+<li><p>参数也是从query中获取</p>
+<ul>
+<li><p>```json<br>{ } // GET <code>/post</code> (empty object)<br>{ “slug”: [“a”] } // <code>GET /post/a</code> (single-element array)<br>{ “slug”: [“a”, “b”] } // <code>GET /post/a/b</code> (multi-element array)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-section">## Next.js 的两种预渲染方式（SG、SSR）</span><br><br>浏览器访问网站典型的流程是，浏览器首先获取一个HTML 页面，此页面并没有数据，然后 useEffect 函数调用 fetch 从服务器获取数据，然后使用这些数据设置组件 state，state 因为发生改变，react 使组件函数重新执行一遍，页面因此重新渲染，因此页面实际上有两个渲染周期。<br>而 <span class="hljs-strong">**SEO**</span> (search engine optimization 搜索引擎优化)依据的是第一个渲染周期的页面，此页面数据为空，为了避免这个问题，可以使得预渲染的页面，在第一个渲染周期就已包含从数据库中获取的数据。<br><br>NextJS 提供了两种形式的预渲染：<br><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**静态生成（Static Generation）**</span><br><br>  如果一个页面使用了静态生成，在页面构建时将生成对应的HTML文件，意味着在生产环境中，运行‘next build’时将生成该页面对应的HTML文件，接着，对应的HTML文件将在每个页面发请求时被复用，也可以被CDN缓存。<br><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**服务器端渲染（Server-side Rendering）**</span><br><br>  如果一个页面使用了服务端渲染，则在每次页面请求时重新去生成HTML文件。 <br><br><span class="hljs-section">## 获取数据</span><br><br>想要在预渲染时获取数据，分为两种情况：<br><br>在<span class="hljs-strong">**静态生成**</span>预渲染阶段，我们的页面组件需要使用到外部数据【接收参数】，通常使用到Next.js提供的函数：<span class="hljs-code">`getStaticProps`</span> ，而如果咱们的页面使用动态路由，也需要的这个函数：<span class="hljs-code">`getStaticPaths`</span> 。这两个函数都需要从同一文件export并都是async异步函数，都在构建时被调用，并允许咱们在预渲染阶段将获取的数据作为<span class="hljs-code">`props`</span>传递给页面。<br><br>在<span class="hljs-strong">**服务端渲染**</span>阶段，咱们如果在某个页面需要频繁去更新数据，可以使用<span class="hljs-code">`getServerSideProps`</span>这个函数去获取数据并传递给页面。这个函数也是从同一页面文件export同时也是async异步函数，在每次页面发请求时被调用。<br><br><span class="hljs-section">### getStaticProps（静态生成）：在构建时获取数据。</span><br><br><span class="hljs-bullet">-</span> 如果从页面export名为 getStaticProps 的异步函数，Next.js 将在构建时使用 getStaticProps 返回的props预渲染此页面<br><br><span class="hljs-bullet">-</span> 接收的形参context为一个对象：<br><br><span class="hljs-bullet">  -</span> params 包含使用过动态路由页面的路由参数，如果页面文件名称是[name].js，那么params为&#123;name:xxx,xxx:xxx...&#125;<br><span class="hljs-bullet">  -</span> preview 如果页面处于预览模式，则preview为true否则为undefined。<br><span class="hljs-bullet">  -</span> previewData 包含 setPreviewData 设置的预览数据<br><span class="hljs-bullet">  -</span> ...<br><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**函数名称固定，返回一个对象，对象必须含有 `props` 属性，此 `props` 用于组件渲染：**</span><br><br><span class="hljs-bullet">  -</span> <span class="hljs-code">`props`</span> 带有将页面组件接收的<span class="hljs-code">`props`</span>可选对象<br><br><span class="hljs-bullet">  -</span> <span class="hljs-code">`revalidate`</span> 以秒为单位的可选数量，之后可以重新生成页面，默认为false。当<span class="hljs-code">`revalidate`</span>为<span class="hljs-code">`false`</span>时，意味着没有重新验证，因此页面将被缓存为已构建，直到下一次构建<br><br><span class="hljs-bullet">    -</span> 使用静态生成意味着，在部署之后， 预渲染的页面不会改变，至少默认不会改变。如果数据变了，那么就需要重新build一遍，重新部署一遍。不这样做页面数据会过时。这对一些数据经常更新的网站是不能接受的。为了解决这个问题，在 getStaticProps 返回的对象中设置 revalidate 属性，值为时间，单位为秒。<br><br><span class="hljs-bullet">    -</span> revalidate表示验证html缓存的周期, 以下代码表示，如果10秒后用户请求了该页面，服务器会去验证缓存与实际数据是否一致，不一致则说明数据有改动，那服务器会根据新数据重新生成一份html, 下一次的请求就会返回这个新的html。其实每次比对的也只是通过接口拿到的json数据。<br><br><span class="hljs-code">      ```jsx</span><br><span class="hljs-code">      export async function getStaticProps(context) &#123; </span><br><span class="hljs-code">          ...... </span><br><span class="hljs-code">          return &#123; </span><br><span class="hljs-code">              props: &#123;...&#125; </span><br><span class="hljs-code">              revalidate: 10 // seconds </span><br><span class="hljs-code">          &#125; </span><br><span class="hljs-code">      &#125;</span><br></code></pre></td></tr></table></figure>
+
+</li>
+<li><p><code>notFound</code> 是一个布尔值，允许页面返回<code>404</code>状态</p>
+</li>
+<li><p><code>redirect</code> 一个可选的重定向值，允许重定向到内部和外部资源，它也是一个对象，有两个属性分别是：destination 重定向位置，字符串类型；permanent 是否永久重定向，布尔值</p>
+</li>
+</ul>
+</li>
+<li><p><code>getStaticProps</code> 可以访问文件系统，可以连数据库。写在这个函数中的代码在build阶段就执行过了，不会到达客户端，不会在服务器上执行，尤其不会在客户端执行。所以这些代码永远不会到达访问者的机器。</p>
+</li>
+</ul>
+<h3 id="getStaticPaths（静态生成）：指定动态路由以根据数据预渲染页面。"><a href="#getStaticPaths（静态生成）：指定动态路由以根据数据预渲染页面。" class="headerlink" title="getStaticPaths（静态生成）：指定动态路由以根据数据预渲染页面。"></a>getStaticPaths（静态生成）：指定动态路由以根据数据预渲染页面。</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getStaticProps</span>(<span class="hljs-params">&#123;params&#125;</span>) &#123; <br>    ...... <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`http://localhost:3000/api/articles/<span class="hljs-subst">$&#123;params.id&#125;</span>`</span>); <br>    <span class="hljs-keyword">return</span> &#123; <br>        <span class="hljs-attr">props</span>:&#123; <br>            <span class="hljs-attr">articles</span>: <br>            <span class="hljs-keyword">await</span> res.<span class="hljs-title function_">json</span>() <br>        &#125; <br>     &#125; <br>&#125; <br> <br><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getStaticPaths</span>(<span class="hljs-params">&#123;params&#125;</span>) &#123; <br>    <span class="hljs-keyword">return</span> &#123; <br>        <span class="hljs-attr">paths</span>: [ <br>            &#123; <span class="hljs-attr">params</span>: &#123;<span class="hljs-attr">id</span>: <span class="hljs-string">`1`</span>&#125; &#125;, <br>            &#123; <span class="hljs-attr">params</span>: &#123;<span class="hljs-attr">id</span>: <span class="hljs-string">`2`</span>&#125; &#125; <br>        ], <br>        <span class="hljs-attr">fallback</span>: <span class="hljs-literal">false</span> <br>    &#125; <br>&#125; <br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Article</span> = (<span class="hljs-params">&#123;article&#125;</span>) =&gt; &#123; ... &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>getStaticPaths主要返回2个属性，一个是设置的路径规则paths，比如示例中预渲染了id为1和2的两篇文章，只有少量文章的话我们完全可以通过id写死的这种形式，但有很多篇并且id不确定呢，这就需要设置fallback参数。</p>
+<ul>
+<li><p>fallback设为false</p>
+<blockquote>
+<p>fallback设为false的话，那就是完全SSG的形式，只根据paths去预渲染页面，如果有规则外的paths，前端会显示404页面。</p>
+</blockquote>
+</li>
+<li><p>fallback设为true</p>
+<blockquote>
+<p>fallback可翻译为<code>应变计划，退路</code>，意思就是当遇到匹配不了的paths时，也就是服务器上并没有请求对应的已生成好的页面时，服务器会立即去生成一份，而不是返回404页面，但这时候需要在页面组件里设置一个loading反馈。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getStaticPaths</span>(<span class="hljs-params">&#123;params&#125;</span>) &#123; <br> <span class="hljs-keyword">return</span> &#123; <br>     <span class="hljs-attr">paths</span>: [...] <br>     <span class="hljs-attr">fallback</span>: <span class="hljs-literal">true</span> <br> &#125; <br>&#125; <br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Article</span> = (<span class="hljs-params">&#123;article&#125;</span>) =&gt; &#123; <br> <span class="hljs-keyword">const</span> router = <span class="hljs-title function_">useRouter</span>(); <br> <span class="hljs-keyword">if</span>(router.<span class="hljs-property">isFallback</span>)&#123; <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>Loading...<span class="hljs-tag">&lt;/&gt;</span></span> &#125; <br> ...... <br>&#125;<br></code></pre></td></tr></table></figure></blockquote>
+</li>
+<li><p>fallback设为blocking</p>
+<blockquote>
+<p>此时遇到新的path服务端也是会去生成一份新的html的，但没有fallback状态，也就是服务端生成html时前端没有加载状态，可能会造成用户点击后过一两秒才能跳转，这也是为啥叫blocking(阻塞， 堵塞的意思)</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="getServerSideProps（服务器端渲染）：获取每个请求的数据。"><a href="#getServerSideProps（服务器端渲染）：获取每个请求的数据。" class="headerlink" title="getServerSideProps（服务器端渲染）：获取每个请求的数据。"></a>getServerSideProps（服务器端渲染）：获取每个请求的数据。</h3><ul>
+<li><p><strong>接收的形参context为一个对象：</strong></p>
+<ul>
+<li>params 包含使用过动态路由页面的路由参数，如果页面文件名称是[name].js，那么params为{name:xxx,xxx:xxx…}</li>
+<li>req HTTP IncomingMessage 对象，以及额外的内置解析助手。</li>
+<li>res </li>
+<li>query 表示查询字符串的对象</li>
+<li>previewData：setPreviewData设置的预览数据</li>
+<li>….</li>
+</ul>
+</li>
+<li><p><strong>返回一个对象</strong></p>
+<ul>
+<li>props - 带有将由页面组件接收的props的可选对象。它应该是可序列化的对象或解析为可序列化对象的 Promise</li>
+<li>notFound - 允许页面返回 404 状态和页面的可选布尔值。</li>
+<li>redirect 一个可选的重定向值，允许重定向到内部和外部资源，它也是一个对象，有两个属性分别是：destination 重定向位置，字符串类型；permanent 是否永久重定向，布尔值</li>
+</ul>
+</li>
+<li><h4 id="运行时机"><a href="#运行时机" class="headerlink" title="运行时机"></a>运行时机</h4><p>无论时开发环境还是生产环境，都是在<strong>请求之后运行</strong> <code>getServerSideProps</code></p>
+</li>
+</ul>
+<h2 id="css支持"><a href="#css支持" class="headerlink" title="css支持"></a>css支持</h2><ul>
+<li><p>添加全局样式：在 <code>pages/_app.js</code> 文件中导入CSS 文件</p>
+</li>
+<li><p>组件级的css: 通过 <code>[name].module.css</code> 文件命名约定来支持</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/*例如，假设 components/ 目录下有一个可重用 Button 组件*/</span><br><span class="hljs-comment">/*首先，创建 components/Button.module.css 文件并填入以下内容：*/</span><br><span class="hljs-selector-class">.error</span> &#123;<br>  <span class="hljs-attribute">color</span>: white;<br>  <span class="hljs-attribute">background-color</span>: red;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./Button.module.css&#x27;</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Button</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">      // <span class="hljs-attr">Note</span> <span class="hljs-attr">how</span> <span class="hljs-attr">the</span> &quot;<span class="hljs-attr">error</span>&quot; <span class="hljs-attr">class</span> <span class="hljs-attr">is</span> <span class="hljs-attr">accessed</span> <span class="hljs-attr">as</span> <span class="hljs-attr">a</span> <span class="hljs-attr">property</span> <span class="hljs-attr">on</span> <span class="hljs-attr">the</span> <span class="hljs-attr">imported</span></span></span><br><span class="hljs-tag"><span class="language-xml">      // `<span class="hljs-attr">styles</span>` <span class="hljs-attr">object.</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">className</span>=<span class="hljs-string">&#123;styles.error&#125;</span></span></span><br><span class="hljs-tag"><span class="language-xml">    &gt;</span></span><br><span class="language-xml">      Destroy</span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>sass支持</p>
+<ul>
+<li><code>npm install sass</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="layouts"><a href="#layouts" class="headerlink" title="layouts"></a>layouts</h2><ul>
+<li><p>只有一种布局</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs tsx"><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">AppProps</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/app&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;../styles/globals.css&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">Layout</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../component/layout&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">App</span>(<span class="hljs-params">&#123; Component, pageProps &#125;: AppProps</span>) &#123;<br>  <span class="hljs-comment">//单个布局</span><br> <span class="hljs-keyword">return</span> (<br>     <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Layout</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">Component</span> &#123;<span class="hljs-attr">...pageProps</span>&#125; /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">Layout</span>&gt;</span></span><br>  )<br>&#125;<br><br></code></pre></td></tr></table></figure></li>
+<li><p>多种布局</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs tsx"><span class="hljs-comment">/*</span><br><span class="hljs-comment">	1.修改_app.tsx</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">AppProps</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/app&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;../styles/globals.css&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">Layout</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../component/layout&#x27;</span><br><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">NextPage</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next&#x27;</span><br><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">ReactElement</span>, <span class="hljs-title class_">ReactNode</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span><br><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">NextPageWithLayout</span> = <span class="hljs-title class_">NextPage</span> &amp; &#123;<br>  getLayout?: <span class="hljs-function">(<span class="hljs-params">page: ReactElement</span>) =&gt;</span> <span class="hljs-title class_">ReactNode</span><br>&#125;<br><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">AppPropsWithLayout</span> = <span class="hljs-title class_">AppProps</span> &amp; &#123;<br>  <span class="hljs-title class_">Component</span>: <span class="hljs-title class_">NextPageWithLayout</span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">App</span>(<span class="hljs-params">&#123; Component, pageProps &#125;: AppPropsWithLayout</span>) &#123;<br>  <span class="hljs-comment">// Use the layout defined at the page level, if available</span><br>  <span class="hljs-keyword">const</span> getLayout = <span class="hljs-title class_">Component</span>.<span class="hljs-property">getLayout</span> || (<span class="hljs-function">(<span class="hljs-params">page</span>) =&gt;</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Layout</span>&gt;</span>&#123;page&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">Layout</span>&gt;</span></span>)<br>  <span class="hljs-keyword">return</span> <span class="hljs-title function_">getLayout</span>(<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span> &#123;<span class="hljs-attr">...pageProps</span>&#125; /&gt;</span></span>)<br>&#125;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">	2.给页面添加getLayout方法</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> &#123; <span class="hljs-title class_">ReactElement</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">Layout</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/layout&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">NestedLayout</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/nested-layout&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Page</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> &#123;<br>    <span class="hljs-comment">/** Your content */</span><br>  &#125;<br>&#125;<br><br><span class="hljs-title class_">Page</span>.<span class="hljs-property">getLayout</span> = <span class="hljs-keyword">function</span> <span class="hljs-title function_">getLayout</span>(<span class="hljs-params">page: ReactElement</span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Layout</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">NestedLayout</span>&gt;</span>&#123;page&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">NestedLayout</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">Layout</span>&gt;</span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Image</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/image&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="字体优化"><a href="#字体优化" class="headerlink" title="字体优化"></a>字体优化</h2><ul>
+<li><p>某个页面使用字体文件</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Head</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/head&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">IndexPage</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Head</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">link</span></span></span><br><span class="hljs-tag"><span class="language-xml">          <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Inter&amp;display=optional&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">          <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">        /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">Head</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>所有页面都使用字体文件 修改  <strong>pages/_document.js</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Document</span>, &#123; <span class="hljs-title class_">Html</span>, <span class="hljs-title class_">Head</span>, <span class="hljs-title class_">Main</span>, <span class="hljs-title class_">NextScript</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/document&#x27;</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDocument</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">Document</span> &#123;<br>  <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> (<br>      <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Html</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">Head</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">link</span></span></span><br><span class="hljs-tag"><span class="language-xml">            <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Inter&amp;display=optional&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">            <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">          /&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">Head</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">Main</span> /&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">NextScript</span> /&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">Html</span>&gt;</span></span><br>    )<br>  &#125;<br>&#125;<br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">MyDocument</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Script"><a href="#Script" class="headerlink" title="Script"></a>Script</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Script</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/script&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Home</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://www.google-analytics.com/analytics.js&quot;</span> /&gt;</span><span class="language-handlebars"><span class="language-xml"></span></span></span><br><span class="language-xml"><span class="language-handlebars"><span class="language-xml">    <span class="hljs-tag">&lt;/&gt;</span></span></span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="静态文件服务"><a href="#静态文件服务" class="headerlink" title="静态文件服务"></a>静态文件服务</h2><ul>
+<li>存放到根目录下的 <code>public</code> 目录中 ，<code>public</code> 目录下存放的静态文件的对外访问路径以 (<code>/</code>) 作为起始路径。</li>
+<li>请勿为 <code>public</code> 改名。此名称是写死的，不能修改，</li>
+<li>请确保静态文件中没有与 <code>pages/</code> 目录下的文件重名的，否则这将导致错误。</li>
+</ul>
+<h2 id="typescript"><a href="#typescript" class="headerlink" title="typescript"></a>typescript</h2><h3 id="静态生成和服务器端渲染"><a href="#静态生成和服务器端渲染" class="headerlink" title="静态生成和服务器端渲染"></a>静态生成和服务器端渲染</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">GetStaticProps</span>, <span class="hljs-title class_">GetStaticPaths</span>, <span class="hljs-title class_">GetServerSideProps</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-attr">getStaticProps</span>: <span class="hljs-title class_">GetStaticProps</span> = <span class="hljs-keyword">async</span> (context) =&gt; &#123;<br>  <span class="hljs-comment">// ...</span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-attr">getStaticPaths</span>: <span class="hljs-title class_">GetStaticPaths</span> = <span class="hljs-keyword">async</span> () =&gt; &#123;<br>  <span class="hljs-comment">// ...</span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-attr">getServerSideProps</span>: <span class="hljs-title class_">GetServerSideProps</span> = <span class="hljs-keyword">async</span> (context) =&gt; &#123;<br>  <span class="hljs-comment">// ...</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="API路由"><a href="#API路由" class="headerlink" title="API路由"></a>API路由</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> &#123; <span class="hljs-title class_">NextApiRequest</span>, <span class="hljs-title class_">NextApiResponse</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (<span class="hljs-attr">req</span>: <span class="hljs-title class_">NextApiRequest</span>, <span class="hljs-attr">res</span>: <span class="hljs-title class_">NextApiResponse</span>) =&gt; &#123;<br>  res.<span class="hljs-title function_">status</span>(<span class="hljs-number">200</span>).<span class="hljs-title function_">json</span>(&#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John Doe&#x27;</span> &#125;)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="自定义APP"><a href="#自定义APP" class="headerlink" title="自定义APP"></a>自定义APP</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// import App from &quot;next/app&quot;;</span><br><span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> &#123; <span class="hljs-title class_">AppProps</span> <span class="hljs-comment">/*, AppContext */</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/app&#x27;</span><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">MyApp</span>(<span class="hljs-params">&#123; Component, pageProps &#125;: AppProps</span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span> &#123;<span class="hljs-attr">...pageProps</span>&#125; /&gt;</span></span><br>&#125;<br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">MyApp</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.nextjs.cn/docs/basic-features/environment-variables#loading-environment-variables">使用 <code>.env.local</code> 加载环境变量</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nextjs.cn/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser">通过给环境变量添加 <code>NEXT_PUBLIC_</code> 前缀将环境变量暴露给浏览器</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>test</div>
+      <div>http://example.com/2022/11/22/test/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>任博</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年11月22日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/11/22/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
